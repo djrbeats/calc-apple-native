@@ -25,19 +25,19 @@
       android:background="@color/bg">
 
       <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnMenu"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:text="≡"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@color/text"
-        android:backgroundTint="@color/darkKey"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:stateListAnimator="@null"
-        app:cornerRadius="22dp"
-        app:rippleColor="@color/lightKey" />
+  android:id="@+id/btnMenu"
+  android:layout_width="44dp"
+  android:layout_height="44dp"
+  android:text="≡"
+  android:textSize="22sp"
+  android:textStyle="bold"
+  android:textColor="@color/text"
+  android:backgroundTint="@color/darkKey"
+  android:insetTop="0dp"
+  android:insetBottom="0dp"
+  android:stateListAnimator="@null"
+  app:cornerRadius="22dp"
+  app:rippleColor="@color/lightKey" />
 
       <TextView
         android:id="@+id/title"
