@@ -1,0 +1,100 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Conversor de moedas (offline)"
+      android:textColor="@color/text"
+      android:textStyle="bold"
+      android:textSize="18sp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Edite as taxas: quanto vale 1 USD em cada moeda."
+      android:textColor="@color/muted"
+      android:textSize="13sp"
+      android:layout_marginTop="6dp"
+      android:layout_marginBottom="12dp"/>
+
+    <EditText
+      android:id="@+id/amount"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:hint="Valor"
+      android:inputType="numberDecimal"
+      android:textColor="@color/text"
+      android:hintTextColor="@color/muted"/>
+
+    <View android:layout_width="match_parent" android:layout_height="10dp"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:id="@+id/from"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:hint="De (USD)"
+        android:text="USD"
+        android:inputType="textCapCharacters"
+        android:textColor="@color/text"
+        android:hintTextColor="@color/muted"/>
+
+      <View android:layout_width="10dp" android:layout_height="1dp"/>
+
+      <EditText
+        android:id="@+id/to"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:hint="Para (BRL)"
+        android:text="BRL"
+        android:inputType="textCapCharacters"
+        android:textColor="@color/text"
+        android:hintTextColor="@color/muted"/>
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/result"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="—"
+      android:textColor="@color/text"
+      android:textStyle="bold"
+      android:textSize="28sp"
+      android:gravity="end"
+      android:layout_marginTop="12dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="18dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Taxas (1 USD vale)"
+      android:textColor="@color/text"
+      android:textStyle="bold"/>
+
+    <EditText android:id="@+id/r_brl" android:layout_width="match_parent" android:layout_height="48dp" android:hint="BRL" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+    <EditText android:id="@+id/r_usd" android:layout_width="match_parent" android:layout_height="48dp" android:hint="USD" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+    <EditText android:id="@+id/r_eur" android:layout_width="match_parent" android:layout_height="48dp" android:hint="EUR" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+    <EditText android:id="@+id/r_gbp" android:layout_width="match_parent" android:layout_height="48dp" android:hint="GBP" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+    <EditText android:id="@+id/r_ars" android:layout_width="match_parent" android:layout_height="48dp" android:hint="ARS" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+    <EditText android:id="@+id/r_pyg" android:layout_width="match_parent" android:layout_height="48dp" android:hint="PYG" android:inputType="numberDecimal" android:textColor="@color/text" android:hintTextColor="@color/muted"/>
+
+    <View android:layout_width="match_parent" android:layout_height="24dp"/>
+
+  </LinearLayout>
+</ScrollView>
