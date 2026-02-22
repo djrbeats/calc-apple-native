@@ -1,7 +1,6 @@
 package com.rafa.calcapple
 
 import android.os.Bundle
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
@@ -16,32 +15,35 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    // AQUI é o pulo do gato: a gente controla os insets (status bar) na mão
+    // Permite desenhar por trás da status bar, MAS vamos aplicar insets corretamente
     WindowCompat.setDecorFitsSystemWindows(window, false)
 
     b = ActivityMainBinding.inflate(layoutInflater)
     setContentView(b.root)
 
-    // aplica padding do topo (status bar) no header e evita layout “subir”
+    // Aplica o padding no header usando insets do sistema (status bar)
     ViewCompat.setOnApplyWindowInsetsListener(b.root) { _, insets ->
-      val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-      // header desce certinho
+      val sys = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+      // desce o header abaixo da status bar
       b.header.setPadding(
         b.header.paddingLeft,
-        sysBars.top + dp(10),
+        sys.top,
         b.header.paddingRight,
         b.header.paddingBottom
       )
-
-      // dá um respiro no fundo pra não colar na navigation bar
-      val lp = b.container.layoutParams as ViewGroup.MarginLayoutParams
-      lp.bottomMargin = sysBars.bottom
-      b.container.layoutParams = lp
-
+      // dá espaço no fundo (navigation bar)
+      b.container.setPadding(
+        b.container.paddingLeft,
+        b.container.paddingTop,
+        b.container.paddingRight,
+        sys.bottom
+      )
       insets
     }
 
-    b.btnMenu.setOnClickListener { b.drawer.openDrawer(GravityCompat.START) }
+    b.btnMenu.setOnClickListener {
+      b.drawer.openDrawer(GravityCompat.START)
+    }
 
     b.navView.setNavigationItemSelectedListener { item ->
       b.drawer.closeDrawer(GravityCompat.START)
@@ -78,6 +80,4 @@ class MainActivity : AppCompatActivity() {
         .commit()
     }
   }
-
-  private fun dp(v: Int): Int = (v * resources.displayMetrics.density).toInt()
 }
