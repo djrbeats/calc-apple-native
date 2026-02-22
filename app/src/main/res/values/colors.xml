@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<color name="dark_button">#1F1F26</color>
     <color name="bg">#0B0B0E</color>
     <color name="sheet">#141418</color>
     <color name="darkKey">#1F1F26</color>
