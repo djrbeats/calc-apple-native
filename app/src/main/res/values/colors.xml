@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="bg">#0B0B0E</color>
-  <color name="sheet">#141418</color>
-  <color name="darkKey">#1F1F26</color>
-  <color name="lightKey">#2A2A33</color>
-  <color name="orange">#FF9F0A</color>
-  <color name="text">#EFEFF2</color>
-  <color name="muted">#9A9AA7</color>
+    <color name="bg">#0B0B0E</color>
+    <color name="sheet">#141418</color>
+    <color name="darkKey">#1F1F26</color>
+    <color name="lightKey">#2A2A33</color>
+    <color name="orange">#FF9F0A</color>
+    <color name="text">#EFEFF2</color>
+    <color name="muted">#9A9AA7</color>
 </resources>

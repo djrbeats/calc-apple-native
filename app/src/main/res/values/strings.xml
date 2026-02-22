@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">Calc Apple</string>
+    <string name="app_name">Calc Apple Native</string>
+
+    <string name="title_calc">Calculadora</string>
+    <string name="title_sci">Científica</string>
+    <string name="title_fx">Moedas</string>
 </resources>
